@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="https://jakarta.ee/xml/ns/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Creation Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button onclick="window.location.href='index.html'" class="home-button">
+    🏠 Go Back to Main Page
+</button>
+
+<h1>📖 Book Creation Form</h1>
+
+<form action="/book-store-inventory-system/book-controller" method="POST">
+    <fieldset>
+        <legend>Enter Book Details</legend>
+
+        <label for="bookid">ID:</label>
+        <input type="number" id="bookid" name="bookid" required>
+
+        <label for="bookname">Name:</label>
+        <input type="text" id="bookname" name="bookname" required>
+
+        <label for="bookauthor">Author:</label>
+        <input type="text" id="bookauthor" name="bookauthor" required>
+
+        <label for="bookpublisher">Publisher:</label>
+        <input type="text" id="bookpublisher" name="bookpublisher" required>
+
+        <label for="bookcopies">No. of Copies:</label>
+        <input type="number" id="bookcopies" name="bookcopies" min="1" required>
+
+        <label for="bookcategory">Category:</label>
+        <select id="bookcategory" name="bookcategory" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="ACADEMIC">ACADEMIC</option>
+            <option value="FICTION">FICTION</option>
+            <option value="HISTORY">HISTORY</option>
+            <option value="MUSIC">MUSIC</option>
+        </select>
+
+        <label for="booklocation">Storage Location:</label>
+        <input type="text" id="booklocation" name="booklocation">
+
+        <label for="bookprice">Price:</label>
+        <input type="number" id="bookprice" name="bookprice" min="0.01" step="0.01" required>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </fieldset>
+</form>
+
+</body>
+</html>

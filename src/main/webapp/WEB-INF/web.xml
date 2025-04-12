@@ -1,0 +1,41 @@
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>bookController</servlet-name>
+        <servlet-class>com.amit.book.inventory.controller.BookController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>customerController</servlet-name>
+        <servlet-class>com.amit.book.inventory.controller.CustomerController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>supplierController</servlet-name>
+        <servlet-class>com.amit.book.inventory.controller.SupplierController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>bookController</servlet-name>
+        <url-pattern>/book-controller</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>customerController</servlet-name>
+        <url-pattern>/customer-controller</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>supplierController</servlet-name>
+        <url-pattern>/supplier-controller</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
